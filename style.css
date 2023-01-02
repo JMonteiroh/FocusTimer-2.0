@@ -78,6 +78,10 @@ button svg path {
   background-color: var(--bg-card-hide);
 }
 
+.hide-buttons  svg path{
+  fill: var(--bg-card-hide);
+}
+
 .hide svg path {
   fill: var(--svg-color-hide);
 }
