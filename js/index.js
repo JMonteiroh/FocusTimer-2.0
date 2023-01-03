@@ -1,4 +1,5 @@
 
+import Timer from "./timer.js"
 import Controls from "./controls.js";
 import Events from "./events.js";
 import {
@@ -10,6 +11,8 @@ import {
   buttonRain,
   buttonCoffee,
   buttonFireplace,
+  minutesDisplay,
+  secondsDisplay,
 } from "./elements.js";
 
 
@@ -24,5 +27,10 @@ const controls = Controls({
   buttonFireplace,
 })
 
+const timer = Timer({
+  minutesDisplay,
+  secondsDisplay,
 
-Events({controls})
+})
+
+Events({controls, timer})

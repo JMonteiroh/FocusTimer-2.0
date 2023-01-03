@@ -6,6 +6,10 @@ const buttonForest = document.querySelector('.forest')
 const buttonRain = document.querySelector('.rain')
 const buttonCoffee = document.querySelector('.coffee')
 const buttonFireplace = document.querySelector('.fireplace')
+const minutesDisplay = document.querySelector('.minutes')
+const secondsDisplay = document.querySelector('.seconds')
+
+
 export {
   buttonPlay,
   buttonStop,
@@ -15,4 +19,6 @@ export {
   buttonRain,
   buttonCoffee,
   buttonFireplace,
+  minutesDisplay,
+  secondsDisplay,
 }

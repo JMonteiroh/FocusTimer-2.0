@@ -8,14 +8,18 @@ import {
   buttonCoffee,
   buttonFireplace,
 } from "./elements.js"
+import Timer from "./timer.js"
 
-export default function({controls}) {
+export default function({controls, timer}) {
   buttonPlay.addEventListener('click', function() {
     controls.play()
+    timer.countdown()
   })
   
   buttonStop.addEventListener('click', function() {
     controls.stop()
+    timer.reset()
+    
   })
 
   buttonMore.addEventListener('click', function() {

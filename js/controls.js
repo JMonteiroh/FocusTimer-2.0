@@ -16,26 +16,17 @@ export default function Controls({
   function stop() {
     buttonPlay.classList.remove('hide-buttons')
     buttonStop.classList.add('hide-buttons')
+    setTimeout(() => {buttonStop.classList.remove('hide-buttons')}, 1000)
   }
 
   function more() {
-    function moreRemove() {
-      buttonMore.classList.remove('hide-buttons')
-    }
-
     buttonMore.classList.add('hide-buttons')
-
-    setTimeout(moreRemove, 200)
+    setTimeout(() => {buttonMore.classList.remove('hide-buttons')}, 200)
   }
 
   function less() {
-    function lessRemove() {
-      buttonLess.classList.remove('hide-buttons')
-    }
-
     buttonLess.classList.add('hide-buttons')
-
-    setTimeout(lessRemove, 200)
+    setTimeout(() => {buttonLess.classList.remove('hide-buttons')}, 200)
   }
 
   function forest() {
