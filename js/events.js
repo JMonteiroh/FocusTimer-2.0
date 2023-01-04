@@ -24,10 +24,18 @@ export default function({controls, timer}) {
 
   buttonMore.addEventListener('click', function() {
     controls.more()
+    let newMinutes = timer.moreMinutes()
+    
+    timer.updateDisplay(newMinutes, 0)
+    timer.updateMinutes(newMinutes)
   })
 
   buttonLess.addEventListener('click', function() {
     controls.less()
+    let newMinutes = timer.lessMinutes()
+    
+    timer.updateDisplay(newMinutes, 0)
+    timer.updateMinutes(newMinutes)
   })
 
   buttonForest.addEventListener('click', function() {
