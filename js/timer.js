@@ -1,3 +1,5 @@
+import sounds from "./sounds.js"
+
 export default function Timer({
   minutesDisplay,
   secondsDisplay,
@@ -30,6 +32,7 @@ export default function Timer({
       if (isFinished) {
         reset()
         updateDisplay()
+        sounds().timeEnd()
         return
       }
 

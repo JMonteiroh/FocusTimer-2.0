@@ -10,11 +10,10 @@ export default function Controls({
 }) {
   function play() {
     buttonPlay.classList.add('hide-buttons')
-    buttonStop.classList.remove('hide-buttons')
+    setTimeout(() => {buttonPlay.classList.remove('hide-buttons')}, 1000)
   }
 
   function stop() {
-    buttonPlay.classList.remove('hide-buttons')
     buttonStop.classList.add('hide-buttons')
     setTimeout(() => {buttonStop.classList.remove('hide-buttons')}, 1000)
   }
@@ -56,8 +55,6 @@ export default function Controls({
     buttonFireplace.classList.add('hide')
     buttonForest.classList.remove('hide')
   }
-
-
 
   return {
     play,
