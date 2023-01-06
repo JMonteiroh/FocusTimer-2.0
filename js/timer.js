@@ -63,6 +63,9 @@ export default function Timer({
 
   function lessMinutes() {
     let newMinutes = Number(minutesDisplay.textContent) - 5
+    if(newMinutes < 0 ) {
+      newMinutes = 0
+    }
  
     return newMinutes
   }
