@@ -1,4 +1,3 @@
-import isFinished from "./timer.js"
 import {
   buttonPlay,
   buttonStop,
@@ -8,19 +7,18 @@ import {
   buttonRain,
   buttonCoffee,
   buttonFireplace,
+  minutesDisplay,
 } from "./elements.js"
 
 export default function({controls, timer, sound}) {
 
   buttonPlay.addEventListener('click', function() {
-    if(isFinished == 0){
+    if(Number(minutesDisplay.textContent) == 0){
       sound.pressButton()
-      console.log("if")
     }else {
       controls.play()
       timer.countdown()
       sound.pressButton()
-      console.log("else")
     }
   })
   
