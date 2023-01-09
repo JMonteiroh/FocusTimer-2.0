@@ -19,6 +19,10 @@ export default function() {
     fireplaceSound.pause()
   }
 
+  function forestPause() {
+    forestSound.pause()
+  }
+
   function rain() {
     rainSound.play()
     forestSound.pause()
@@ -54,6 +58,10 @@ export default function() {
     rain,
     coffee,
     fireplace,
+    forestSound,
+    rainSound,
+    coffeeSound,
+    fireplaceSound,
   }
 
 }

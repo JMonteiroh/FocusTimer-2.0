@@ -1,3 +1,4 @@
+import isFinished from "./timer.js"
 import {
   buttonPlay,
   buttonStop,
@@ -10,10 +11,17 @@ import {
 } from "./elements.js"
 
 export default function({controls, timer, sound}) {
+
   buttonPlay.addEventListener('click', function() {
-    controls.play()
-    timer.countdown()
-    sound.pressButton()
+    if(isFinished == 0){
+      sound.pressButton()
+      console.log("if")
+    }else {
+      controls.play()
+      timer.countdown()
+      sound.pressButton()
+      console.log("else")
+    }
   })
   
   buttonStop.addEventListener('click', function() {
@@ -39,26 +47,50 @@ export default function({controls, timer, sound}) {
   })
 
   buttonForest.addEventListener('click', function() {
-    controls.forest()
-    sound.pressButton()
-    sound.forest()
+    if(buttonForest.classList.contains('hide')) {
+      buttonForest.classList.remove('hide')
+      sound.pressButton()
+      sound.forestSound.pause()
+    }else{
+      controls.forest()
+      sound.pressButton()
+      sound.forest()
+    }
   })
 
   buttonRain.addEventListener('click', function() {
-    controls.rain()
-    sound.pressButton()
-    sound.rain()
+    if(buttonRain.classList.contains('hide')) {
+      buttonRain.classList.remove('hide')
+      sound.pressButton()
+      sound.rainSound.pause()
+    }else{
+      controls.rain()
+      sound.pressButton()
+      sound.rain()
+    }
   })
   
   buttonCoffee.addEventListener('click', function() {
-    controls.coffee()
-    sound.pressButton()
-    sound.coffee()
+    if(buttonCoffee.classList.contains('hide')) {
+      buttonCoffee.classList.remove('hide')
+      sound.pressButton()
+      sound.coffeeSound.pause()
+    }else {
+      controls.coffee()
+      sound.pressButton()
+      sound.coffee()
+    }
   })
 
   buttonFireplace.addEventListener('click', function() {
+  if(buttonFireplace.classList.contains('hide')) {
+    buttonFireplace.classList.remove('hide')
+    sound.pressButton()
+    sound.fireplaceSound.pause()
+  }else {
     controls.fireplace()
     sound.pressButton()
     sound.fireplace()
+  }
   })
 }

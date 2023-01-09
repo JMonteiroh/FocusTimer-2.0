@@ -4,7 +4,7 @@ export default function Timer({
   minutesDisplay,
   secondsDisplay,
   reset,
-  hold
+  hold,
 }) {
   let timerTimeOut
   let minutes = (minutesDisplay.textContent)
@@ -20,6 +20,8 @@ export default function Timer({
     updateDisplay(0, 0)
     clearTimeout(timerTimeOut)
   }
+
+  
 
   function countdown() {
     timerTimeOut = setTimeout(function() {
@@ -77,7 +79,6 @@ export default function Timer({
     reset,
     hold,
     moreMinutes,
-    lessMinutes
-    
+    lessMinutes,
   }
 }
